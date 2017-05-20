@@ -211,9 +211,11 @@
 					put();
 					},parseInt(150+Math.random()*200));
 				}
-				temp=setInterval(function(){
+				$(window).bind("load",function(){
+					temp=setInterval(function(){
 					put();
 					},parseInt(150+Math.random()*200));
+				});
 			</script>
 	</body>
 </html>
