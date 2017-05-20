@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WEB TERMINAL</title>
+		<style type="text/css">
+			body{
+				background-color: #000;
+				color: #FFF;
+			}
+			#img
+			{
+				background-color: #cacaca;
+				margin: 0px;
+			}
+			#img img
+			{
+				margin: 0px;
+			}
+		</style>
+		<script type="text/javascript" src="jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="img"><img src="status_bar.jpg"></div>
+		<br>
+		<div id="code0"></div>
+	</body>
+	<script type="text/javascript">
+	str="Reading package lists...&\
+Building dependency tree...&\
+Reading state information...&\
+The following extra packages will be installed:&\
+  libevent-2.0-5 tor-geoipdb torsocks&\
+Suggested packages:&\
+  mixmaster torbrowser-launcher socat tor-arm apparmor-utils obfsproxy&\
+  obfs4proxy&\
+The following NEW packages will be installed:&\
+  libevent-2.0-5 tor tor-geoipdb torsocks&\
+0 upgraded, 4 newly installed, 0 to remove and 3 not upgraded.&\
+Need to get 1,538 kB of archives.&\
+After this operation, 7,486 kB of additional disk space will be used.&\
+Do you want to continue? [Y/n] Get:1 http://in.archive.ubuntu.com/ubuntu/ wily/main libevent-2.0-5 amd64 2.0.21-stable-2 [113 kB]&\
+Get:2 http://in.archive.ubuntu.com/ubuntu/ wily/universe tor amd64 0.2.6.10-1ubuntu2 [858 kB]&\
+Get:3 http://in.archive.ubuntu.com/ubuntu/ wily/universe torsocks amd64 2.1.0-1 [54.3 kB]&\
+Get:4 http://in.archive.ubuntu.com/ubuntu/ wily/universe tor-geoipdb all 0.2.6.10-1ubuntu2 [513 kB]&\
+Fetched 1,538 kB in 5s (307 kB/s)&\
+Selecting previously unselected package libevent-2.0-5:amd64.&\
+(Reading database ... &\
+(Reading database ... 5%&\
+(Reading database ... 10%&\
+(Reading database ... 15%&\
+(Reading database ... 20%&\
+(Reading database ... 25%&\
+(Reading database ... 30%&\
+(Reading database ... 35%&\
+(Reading database ... 40%&\
+(Reading database ... 45%&\
+(Reading database ... 50%&\
+(Reading database ... 55%&\
+(Reading database ... 60%&\
+(Reading database ... 65%&\
+(Reading database ... 70%&\
+(Reading database ... 75%&\
+(Reading database ... 80%&\
+(Reading database ... 85%&\
+(Reading database ... 90%&\
+(Reading database ... 95%&\
+(Reading database ... 100%&\
+(Reading database ... 192319 files and directories currently installed.)&\
+Preparing to unpack .../libevent-2.0-5_2.0.21-stable-2_amd64.deb ...&\
+Unpacking libevent-2.0-5:amd64 (2.0.21-stable-2) ...&\
+Selecting previously unselected package tor.&\
+Preparing to unpack .../tor_0.2.6.10-1ubuntu2_amd64.deb ...&\
+Unpacking tor (0.2.6.10-1ubuntu2) ...&\
+Selecting previously unselected package torsocks.&\
+Preparing to unpack .../torsocks_2.1.0-1_amd64.deb ...&\
+Unpacking torsocks (2.1.0-1) ...&\
+Selecting previously unselected package tor-geoipdb.&\
+Preparing to unpack .../tor-geoipdb_0.2.6.10-1ubuntu2_all.deb ...&\
+Unpacking tor-geoipdb (0.2.6.10-1ubuntu2) ...&\
+Processing triggers for man-db (2.7.4-1) ...&\
+Processing triggers for systemd (225-1ubuntu9.1) ...&\
+Processing triggers for ureadahead (0.100.0-19) ...&\
+ureadahead will be reprofiled on next reboot&\
+Setting up libevent-2.0-5:amd64 (2.0.21-stable-2) ...&\
+Setting up tor (0.2.6.10-1ubuntu2) ...&\
+Something or somebody made /var/lib/tor disappear.&\
+Creating one for you again.&\
+Something or somebody made /var/log/tor disappear.&\
+Creating one for you again.&\
+Setting up torsocks (2.1.0-1) ...&\
+Setting up tor-geoipdb (0.2.6.10-1ubuntu2) ...&\
+Processing triggers for libc-bin (2.21-0ubuntu4.3) ...&\
+Processing triggers for systemd (225-1ubuntu9.1) ...&\
+Processing triggers for ureadahead (0.100.0-19) ...&\
+";
+	len=str.length;
+	pos=0;
+	i=0;
+	j=0;
+	for(j=0;j<len;j++)
+		if(str.charAt(j)=='&')
+			break;
+	function put()
+	{
+		$("#code"+pos).html("> "+str.substring(i,j)+"<div id='code"+(pos+1)+"'></div>")
+		i=j+1;
+		pos++;
+		for(j=i;j<len;j++)
+			if(str.charAt(j)=='&')
+				break;
+		if(j==len)
+			clearInterval(temp);
+		window.scrollTo(0,document.body.scrollHeight);
+	}
+	temp=setInterval(function(){
+		put();
+	},parseInt(Math.random()*100));
+	</script>
+</html>
