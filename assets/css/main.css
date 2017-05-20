@@ -2722,6 +2722,14 @@
 		}
 
 /* Tiles */
+	#three
+	{
+		text-align: center;
+	}
+	 #three h1
+	 {
+	 	padding-top: 30px;
+	 }
 
 	.tiles {
 		display: -moz-flex;
@@ -2757,9 +2765,9 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			cursor: default;
-			height: 40vh;
-			max-height: 40em;
-			min-height: 23em;
+			height: 20vh;
+			max-height: 20em;
+			min-height: 12em;
 			overflow: hidden;
 			position: relative;
 			width: 40%;
@@ -2809,7 +2817,7 @@
 			}
 
 			.tiles article:after {
-				background-color: rgba(36, 41, 67, 0.25);
+				background-color: rgba(50, 50, 50, 0.25);
 				content: '';
 				display: block;
 				height: 100%;
@@ -2841,27 +2849,27 @@
 			}
 
 			.tiles article:nth-child(6n - 5):before {
-				background-color: #6fc3df;
+				background-color: #112233;
 			}
 
 			.tiles article:nth-child(6n - 4):before {
-				background-color: #8d82c4;
+				background-color: #442233;
 			}
 
 			.tiles article:nth-child(6n - 3):before {
-				background-color: #ec8d81;
+				background-color: #335544;
 			}
 
 			.tiles article:nth-child(6n - 2):before {
-				background-color: #e7b788;
+				background-color: #445566;
 			}
 
 			.tiles article:nth-child(6n - 1):before {
-				background-color: #8ea9e8;
+				background-color: #556677;
 			}
 
 			.tiles article:nth-child(6n):before {
-				background-color: #87c5a4;
+				background-color: #667788;
 			}
 
 		@media screen and (max-width: 1280px) {
@@ -3423,7 +3431,7 @@
 			-webkit-pointer-events: none;
 			-ms-pointer-events: none;
 			pointer-events: none;
-			background-color: #242943;
+			background-color: #111;
 			content: '';
 			display: block;
 			height: 100%;
