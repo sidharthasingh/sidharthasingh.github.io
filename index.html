@@ -96,62 +96,17 @@
 									</header>
 									<p>I am a junior at Amity University, Noida campus, pursuing my bachelors in computer science engineering. I love tangling with the things around me. Currently I am working on building machine learning algorithms for computed robotic motion.</p>
 									<ul class="actions">
-										<li><a href="landing.html" class="button next">Resume</a></li>
+										<li><a href="landing.html" class="button next">View Resume</a></li>
 									</ul>
 								</div>
 							</section>
 					</div>
-
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="field half first">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="6"></textarea>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="special" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
+								<center><section>
+								<br>
 									<div class="contact-method">
-										<span class="icon alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="mailto:sidharhasingh2@gmail.com">sidharthasingh2@gmail.com</a>
+										<h3>let's connect</h3><a href="mailto:sidharhasingh2@gmail.com">sidharthasingh2@gmail.com</a>
 									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(+91) 965-070-9984</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon alt fa-home"></span>
-										<h3>Address</h3>
-										<span>Dwarka 4<br />
-										New Delhi - 110075<br />
-										Delhi, India</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
+								</section></center>
 				<footer id="footer">
 					<div class="inner">
 						<ul class="icons">
@@ -173,7 +128,7 @@
 			<script src="assets/js/main.js"></script>
 			<script type="text/javascript">
 				str="Hello World! I am SiD.";
-				pos=0;
+				pos=-1;
 				myInd='_';
 				function put()
 				{
@@ -201,6 +156,8 @@
 						pos-=2;
 						myInd='|';
 					}
+					if(pos<0)
+						pos=-1;
 				}
 				function startCode()
 				{
