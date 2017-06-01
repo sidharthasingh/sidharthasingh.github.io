@@ -9,6 +9,9 @@
 			}
 			#img
 			{
+				top:0%;
+				position: absolute;
+				width: 100%;
 				background-color: #cacaca;
 				margin: 0px;
 			}
@@ -21,7 +24,7 @@
 	</head>
 	<body>
 		<div id="img"><img src="status_bar.jpg"></div>
-		<br>
+		<br><br>
 		<div id="code0"></div>
 	</body>
 	<script type="text/javascript">
@@ -113,7 +116,7 @@ Processing triggers for ureadahead (0.100.0-19) ...&\
 		window.scrollTo(0,document.body.scrollHeight);
 	}
 	temp=setInterval(function(){
-		put();
-	},parseInt(Math.random()*500));
+		setTimeout(function(){put();},Math.random()*300);
+	},parseInt(Math.random()*700));
 	</script>
 </html>
