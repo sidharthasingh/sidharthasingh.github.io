@@ -5,50 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
-		<style type="text/css">
-			h2{
-				width: 100%;
-				max-width: 300px;
-				margin: auto;
-				text-align: center;
-				color: #7bd39a;
-				margin-top: 30px;
-			}
-
-			#codeDis{
-				float: left;
-			}
-
-			.me > img{
-				height: 100%;
-				width: 100%;
-			}
-
-			.me > .glaze{
-				width: 200px;
-				height: 200px;
-				border-radius: 50%;
-				background-color: rgba(0,0,0,0.5);
-				position:absolute;
-				overflow: hidden;
-				-webkit-transition: background-color 1s;  /*Safari*/ 
-				transition: background-color 1s;
-			}
-
-			.glaze:hover{
-				background-color: rgba(0,0,0,0.0);
-			}
-
-			.me{
-				height: 200px;
-				width: 200px;
-				overflow: hidden;
-				display: block;
-				margin: auto;
-				border-radius: 50%;
-				margin-top: 150px;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="main.css">
 	</head>
 	<body>
 		<div class="me">
@@ -57,33 +14,6 @@
 		</div>
 		<h2><span id="codeDis"></span><span id="jhgfd">|</span></h2>
 	</body>
-	<script src="assets/js/jquery.min.js"></script>
-	<script type="text/javascript">
-		message="Hello World! I am SiD.";
-		pos=0;
-		temp = null;
-		backspace = () => {
-			return (Math.random()>0.7)?true:false;
-		}
-		obj = $("#codeDis");
-		put = () => {
-			pos++;
-			if(pos >= message.length)
-			{
-				clearInterval(temp);
-				return;
-			}
-			obj.html(message.substr(0,pos)+" ");
-			clearInterval(temp);
-			temp=setInterval(put,parseInt(150+Math.random()*200));
-		}
-		$(window).bind("load",function(){
-			temp=setInterval(put,parseInt(150+Math.random()*200));
-		});
-		jh=0;
-		setInterval(function(){
-			jh=!jh;
-			$("#jhgfd").animate({opacity:jh},200);
-		},500);
-	</script>
+	<script src="/assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
 </html>

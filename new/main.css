@@ -1,0 +1,42 @@
+h2{
+				width: 100%;
+				max-width: 300px;
+				margin: auto;
+				text-align: center;
+				color: #7bd39a;
+				margin-top: 30px;
+			}
+
+			#codeDis{
+				float: left;
+			}
+
+			.me > img{
+				height: 100%;
+				width: 100%;
+			}
+
+			.me > .glaze{
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				background-color: rgba(0,0,0,0.5);
+				position:absolute;
+				overflow: hidden;
+				-webkit-transition: background-color 1s;  /*Safari*/ 
+				transition: background-color 1s;
+			}
+
+			.glaze:hover{
+				background-color: rgba(0,0,0,0.0);
+			}
+
+			.me{
+				height: 200px;
+				width: 200px;
+				overflow: hidden;
+				display: block;
+				margin: auto;
+				border-radius: 50%;
+				margin-top: 150px;
+			}
