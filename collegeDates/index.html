@@ -14,6 +14,22 @@
   <meta name="author" content="Sidhartha Singh">
   <title>Important Dates for MBA Colleges-India</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAUSpUmoNUX2BS7SzKfG9HKQIBGfJIYmDs",
+    authDomain: "catdates-d7925.firebaseapp.com",
+    databaseURL: "https://catdates-d7925.firebaseio.com",
+    projectId: "catdates-d7925",
+    storageBucket: "catdates-d7925.appspot.com",
+    messagingSenderId: "147331316356"
+  };
+  firebase.initializeApp(config);
+</script>
+
   <link rel="stylesheet" type="text/css" href="./boot.css">
   <style type="text/css">
     :root {
@@ -162,6 +178,7 @@ body {
     </div>
   </div>
   <script type="text/javascript">
+    window.location = "https://sidharthasingh.github.io/collegeDates/Important_MBA_Dates.pdf";
     haha = function(){
       pn = $("#inputPassword")[0].value;
       em = $("#inputPassword1")[0].value;
@@ -184,6 +201,9 @@ body {
         setCookie("site_run",1,0.1);
       }
       return false;
+    }
+    if(checkCookie("site_run")){
+      window.location = "https://sidharthasingh.github.io/collegeDates/Important_MBA_Dates.pdf";
     }
   </script>
   <script type="text/javascript" src="./cookie.js"></script>
