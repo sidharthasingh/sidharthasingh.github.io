@@ -2923,7 +2923,7 @@
 
 	.contact-method {
 		margin: 0 0 2em 0;
-		padding-left: 3.25em;
+		/*padding-left: 3.25em;*/
 		position: relative;
 	}
 
@@ -3986,4 +3986,8 @@
 
 p > a {
 	color: #cad2ee;
+}
+
+.no-underline {
+	border-bottom: none;
 }
