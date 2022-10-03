@@ -3983,3 +3983,7 @@
 			opacity: 1;
 			visibility: visible;
 		}
+
+p > a {
+	color: #cad2ee;
+}
